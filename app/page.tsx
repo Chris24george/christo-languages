@@ -4,6 +4,7 @@ import { ArrowRight, BookOpen, Calendar, Globe, Mail, MessageSquare, Smartphone 
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-serif text-xl">
-            <Globe className="h-5 w-5" />
+            <Globe className="h-5 w-5 text-primary" />
             <span>ChristoLanguage</span>
           </Link>
           <nav className="hidden md:flex gap-6">
@@ -31,23 +32,24 @@ export default function Home() {
               About
             </Link>
           </nav>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <Button asChild variant="outline" className="hidden md:flex">
               <Link href="#newsletter">Newsletter</Link>
             </Button>
             <Button asChild>
               <Link href="#coaching">Book a Session</Link>
             </Button>
+            <ThemeToggle />
           </div>
         </div>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-parchment-100 to-background">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-card to-background">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-ink-900">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-foreground">
                     Master Languages with Christo
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -56,12 +58,12 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button asChild size="lg" className="bg-parchment-800 hover:bg-parchment-900">
+                  <Button asChild size="lg">
                     <Link href="#services">
                       Explore Services <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="border-parchment-300">
+                  <Button asChild variant="outline" size="lg">
                     <Link href="#blog">Read the Blog</Link>
                   </Button>
                 </div>
@@ -72,16 +74,17 @@ export default function Home() {
                 height={550}
                 alt="Language learning illustration"
                 className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last shadow-lg"
+                priority
               />
             </div>
           </div>
         </section>
 
-        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-parchment-50">
+        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-background">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-ink-900">
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-foreground">
                   Comprehensive Language Learning Services
                 </h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
@@ -91,23 +94,23 @@ export default function Home() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="grid gap-6">
-                <div className="grid gap-1 p-6 rounded-lg bg-card shadow-sm border border-parchment-200">
-                  <h3 className="text-xl font-bold text-ink-900">Insightful Blog Content</h3>
+                <div className="grid gap-1 p-6 rounded-lg bg-card shadow-sm border">
+                  <h3 className="text-xl font-bold text-card-foreground">Insightful Blog Content</h3>
                   <p className="text-muted-foreground">
                     Regular articles on language learning techniques, cultural insights, and practical tips.
                   </p>
-                  <Button asChild variant="link" className="px-0 text-parchment-800">
+                  <Button asChild variant="link" className="px-0 text-primary">
                     <Link href="#blog" className="mt-2">
                       Read the Blog <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
-                <div className="grid gap-1 p-6 rounded-lg bg-card shadow-sm border border-parchment-200">
-                  <h3 className="text-xl font-bold text-ink-900">Premium Learning Materials</h3>
+                <div className="grid gap-1 p-6 rounded-lg bg-card shadow-sm border">
+                  <h3 className="text-xl font-bold text-card-foreground">Premium Learning Materials</h3>
                   <p className="text-muted-foreground">
                     Carefully crafted resources to accelerate your language learning journey.
                   </p>
-                  <Button asChild variant="link" className="px-0 text-parchment-800">
+                  <Button asChild variant="link" className="px-0 text-primary">
                     <Link href="#premium" className="mt-2">
                       Browse Materials <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
@@ -115,23 +118,23 @@ export default function Home() {
                 </div>
               </div>
               <div className="grid gap-6">
-                <div className="grid gap-1 p-6 rounded-lg bg-card shadow-sm border border-parchment-200">
-                  <h3 className="text-xl font-bold text-ink-900">iOS Language Learning App</h3>
+                <div className="grid gap-1 p-6 rounded-lg bg-card shadow-sm border">
+                  <h3 className="text-xl font-bold text-card-foreground">iOS Language Learning App</h3>
                   <p className="text-muted-foreground">
                     Practice on the go with our intuitive and effective mobile application.
                   </p>
-                  <Button asChild variant="link" className="px-0 text-parchment-800">
+                  <Button asChild variant="link" className="px-0 text-primary">
                     <Link href="#app" className="mt-2">
                       Discover the App <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
-                <div className="grid gap-1 p-6 rounded-lg bg-card shadow-sm border border-parchment-200">
-                  <h3 className="text-xl font-bold text-ink-900">One-on-One Coaching</h3>
+                <div className="grid gap-1 p-6 rounded-lg bg-card shadow-sm border">
+                  <h3 className="text-xl font-bold text-card-foreground">One-on-One Coaching</h3>
                   <p className="text-muted-foreground">
                     Personalized sessions tailored to your specific language goals and learning style.
                   </p>
-                  <Button asChild variant="link" className="px-0 text-parchment-800">
+                  <Button asChild variant="link" className="px-0 text-primary">
                     <Link href="#coaching" className="mt-2">
                       Book a Session <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
@@ -142,11 +145,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="blog" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-parchment-50">
+        <section id="blog" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-card">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-ink-900">
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-foreground">
                   Latest from the Blog
                 </h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
@@ -158,7 +161,7 @@ export default function Home() {
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className="group relative flex flex-col space-y-2 bg-card rounded-lg shadow-md overflow-hidden border border-parchment-200"
+                  className="group relative flex flex-col space-y-2 bg-card rounded-lg shadow-md overflow-hidden border"
                 >
                   <Image
                     src={`/placeholder.svg?height=200&width=400&text=Blog+${i}`}
@@ -168,11 +171,11 @@ export default function Home() {
                     className="object-cover transition-all duration-200 group-hover:scale-105"
                   />
                   <div className="flex-1 space-y-2 p-6">
-                    <h3 className="text-xl font-bold text-ink-900">Language Learning Technique #{i}</h3>
+                    <h3 className="text-xl font-bold text-card-foreground">Language Learning Technique #{i}</h3>
                     <p className="text-muted-foreground">
                       Effective strategies to accelerate your language acquisition process.
                     </p>
-                    <Button asChild variant="link" className="px-0 text-parchment-800">
+                    <Button asChild variant="link" className="px-0 text-primary">
                       <Link href={`/blog/post-${i}`}>
                         Read More <ArrowRight className="ml-1 h-4 w-4" />
                       </Link>
@@ -182,18 +185,18 @@ export default function Home() {
               ))}
             </div>
             <div className="flex justify-center">
-              <Button asChild variant="outline" size="lg" className="border-parchment-300">
+              <Button asChild variant="outline" size="lg">
                 <Link href="/blog">View All Articles</Link>
               </Button>
             </div>
           </div>
         </section>
 
-        <section id="premium" className="w-full py-12 md:py-24 lg:py-32 bg-parchment-50">
+        <section id="premium" className="w-full py-12 md:py-24 lg:py-32 bg-background">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-ink-900">
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-foreground">
                   Premium Learning Materials
                 </h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
@@ -224,13 +227,15 @@ export default function Home() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="flex flex-col items-center space-y-4 rounded-lg border border-parchment-200 bg-card p-6 shadow-md"
+                  className="flex flex-col items-center space-y-4 rounded-lg border bg-card p-6 shadow-md"
                 >
-                  <div className="rounded-full bg-parchment-100 p-4 text-parchment-800">{item.icon}</div>
-                  <h3 className="text-xl font-bold text-ink-900">{item.title}</h3>
+                  <div className="rounded-full bg-secondary p-4 text-secondary-foreground">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-card-foreground">{item.title}</h3>
                   <p className="text-center text-muted-foreground">{item.description}</p>
-                  <div className="text-2xl font-bold text-parchment-800">{item.price}</div>
-                  <Button asChild className="w-full bg-parchment-800 hover:bg-parchment-900">
+                  <div className="text-2xl font-bold text-primary">{item.price}</div>
+                  <Button asChild className="w-full">
                     <Link href={`/premium/${i + 1}`}>Purchase Now</Link>
                   </Button>
                 </div>
@@ -385,11 +390,11 @@ export default function Home() {
 
         <section
           id="newsletter"
-          className="w-full py-12 md:py-24 lg:py-32 bg-parchment-100 bg-[url('/placeholder.svg?height=100&width=100')] bg-opacity-50"
+          className="w-full py-12 md:py-24 lg:py-32 bg-card"
         >
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-ink-900">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-foreground">
                 Subscribe to the Language Learning Newsletter
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -401,15 +406,15 @@ export default function Home() {
                 <Input
                   type="email"
                   placeholder="Enter your email"
-                  className="max-w-lg flex-1 bg-parchment-50 border-parchment-300"
+                  className="max-w-lg flex-1"
                 />
-                <Button type="submit" className="bg-parchment-800 hover:bg-parchment-900">
+                <Button type="submit">
                   Subscribe
                 </Button>
               </form>
               <p className="text-xs text-muted-foreground">
                 By subscribing, you agree to our{" "}
-                <Link href="/terms" className="underline underline-offset-2 text-parchment-800">
+                <Link href="/terms" className="underline underline-offset-2 text-primary">
                   Terms & Conditions
                 </Link>
                 .
@@ -444,12 +449,12 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t border-parchment-200 bg-parchment-50">
+      <footer className="w-full border-t bg-card">
         <div className="container flex flex-col gap-6 py-12 px-4 md:px-6 md:flex-row md:justify-between">
           <div className="flex flex-col gap-6 md:w-1/3">
             <Link href="/" className="flex items-center gap-2 font-serif text-xl">
-              <Globe className="h-5 w-5 text-parchment-800" />
-              <span className="text-ink-900">ChristoLanguage</span>
+              <Globe className="h-5 w-5 text-primary" />
+              <span className="text-foreground">ChristoLanguage</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               Empowering language learners through expert guidance, innovative tools, and comprehensive resources.
@@ -457,60 +462,60 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 gap-12 sm:grid-cols-3">
             <div className="space-y-3">
-              <h3 className="text-sm font-medium text-ink-900">Services</h3>
+              <h3 className="text-sm font-medium text-foreground">Services</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#blog" className="text-sm text-muted-foreground hover:text-parchment-800">
+                  <Link href="#blog" className="text-sm text-muted-foreground hover:text-primary">
                     Blog
                   </Link>
                 </li>
                 <li>
-                  <Link href="#premium" className="text-sm text-muted-foreground hover:text-parchment-800">
+                  <Link href="#premium" className="text-sm text-muted-foreground hover:text-primary">
                     Premium Content
                   </Link>
                 </li>
                 <li>
-                  <Link href="#app" className="text-sm text-muted-foreground hover:text-parchment-800">
+                  <Link href="#app" className="text-sm text-muted-foreground hover:text-primary">
                     iOS App
                   </Link>
                 </li>
                 <li>
-                  <Link href="#coaching" className="text-sm text-muted-foreground hover:text-parchment-800">
+                  <Link href="#coaching" className="text-sm text-muted-foreground hover:text-primary">
                     Coaching
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="text-sm font-medium text-ink-900">Company</h3>
+              <h3 className="text-sm font-medium text-foreground">Company</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#about" className="text-sm text-muted-foreground hover:text-parchment-800">
+                  <Link href="#about" className="text-sm text-muted-foreground hover:text-primary">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-sm text-muted-foreground hover:text-parchment-800">
+                  <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">
                     Contact
                   </Link>
                 </li>
                 <li>
-                  <Link href="/faq" className="text-sm text-muted-foreground hover:text-parchment-800">
+                  <Link href="/faq" className="text-sm text-muted-foreground hover:text-primary">
                     FAQ
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="text-sm font-medium text-ink-900">Legal</h3>
+              <h3 className="text-sm font-medium text-foreground">Legal</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/privacy" className="text-sm text-muted-foreground hover:text-parchment-800">
+                  <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="/terms" className="text-sm text-muted-foreground hover:text-parchment-800">
+                  <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary">
                     Terms of Service
                   </Link>
                 </li>
@@ -518,12 +523,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container flex flex-col gap-2 sm:flex-row py-6 items-center border-t border-parchment-200 px-4 md:px-6">
+        <div className="container flex flex-col gap-2 sm:flex-row py-6 items-center border-t px-4 md:px-6">
           <p className="text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} ChristoLanguage. All rights reserved.
           </p>
           <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link href="#" className="text-xs text-muted-foreground hover:text-parchment-800">
+            <Link href="#" className="text-xs text-muted-foreground hover:text-primary">
               <span className="sr-only">Twitter</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -540,7 +545,7 @@ export default function Home() {
                 <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
               </svg>
             </Link>
-            <Link href="#" className="text-xs text-muted-foreground hover:text-parchment-800">
+            <Link href="#" className="text-xs text-muted-foreground hover:text-primary">
               <span className="sr-only">Instagram</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -559,7 +564,7 @@ export default function Home() {
                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
               </svg>
             </Link>
-            <Link href="#" className="text-xs text-muted-foreground hover:text-parchment-800">
+            <Link href="#" className="text-xs text-muted-foreground hover:text-primary">
               <span className="sr-only">YouTube</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
