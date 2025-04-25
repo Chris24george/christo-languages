@@ -7,15 +7,8 @@ export default function AppPage() {
   return (
     <main className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          <Image
-            src="/placeholder.svg?height=600&width=300&text=App+Screenshot"
-            width={300}
-            height={600}
-            alt="iOS App Screenshot"
-            className="mx-auto aspect-[1/2] overflow-hidden rounded-xl object-cover object-center sm:w-full"
-          />
-          <div className="flex flex-col justify-center space-y-4">
+        <div className="grid gap-6 lg:grid-cols-1 lg:gap-12">
+          <div className="flex flex-col justify-center space-y-4 mx-auto max-w-3xl text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Learn on the Go with Our iOS App

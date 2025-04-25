@@ -23,13 +23,6 @@ export default function BlogPage() {
               key={i}
               className="group relative flex flex-col space-y-2 bg-card rounded-lg shadow-md overflow-hidden border"
             >
-              <Image
-                src={`/placeholder.svg?height=200&width=400&text=Blog+${i}`}
-                width={400}
-                height={200}
-                alt={`Blog post ${i}`}
-                className="object-cover transition-all duration-200 group-hover:scale-105"
-              />
               <div className="flex-1 space-y-2 p-6">
                 <h3 className="text-xl font-bold text-card-foreground">Language Learning Technique #{i}</h3>
                 <p className="text-muted-foreground">

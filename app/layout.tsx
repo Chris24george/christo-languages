@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
+import MobileNav from "@/components/mobile-nav"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" })
@@ -33,9 +34,6 @@ export default function RootLayout({
                   <span>ChristoLanguages</span>
                 </Link>
                 <nav className="hidden md:flex gap-6">
-                  <Link href="#services" className="text-sm font-medium hover:text-primary">
-                    Services
-                  </Link>
                   <Link href="/blog" className="text-sm font-medium hover:text-primary">
                     Blog
                   </Link>
@@ -50,13 +48,16 @@ export default function RootLayout({
                   </Link>
                 </nav>
                 <div className="flex items-center gap-2">
-                  <Button asChild variant="outline" className="hidden md:flex">
-                    <Link href="/newsletter">Newsletter</Link>
-                  </Button>
-                  <Button asChild>
-                    <Link href="/coaching">Book a Session</Link>
-                  </Button>
-                  <ThemeToggle />
+                  <MobileNav />
+                  <div className="hidden md:flex items-center gap-2">
+                    <Button asChild variant="outline">
+                      <Link href="/newsletter">Newsletter</Link>
+                    </Button>
+                    <Button asChild>
+                      <Link href="/coaching">Book a Session</Link>
+                    </Button>
+                    <ThemeToggle />
+                  </div>
                 </div>
               </div>
             </header>
