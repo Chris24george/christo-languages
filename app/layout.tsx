@@ -33,7 +33,7 @@ export default function RootLayout({
                   <span>ChristoLanguage</span>
                 </Link>
                 <nav className="hidden md:flex gap-6">
-                  <Link href="/services" className="text-sm font-medium hover:text-primary">
+                  <Link href="#services" className="text-sm font-medium hover:text-primary">
                     Services
                   </Link>
                   <Link href="/blog" className="text-sm font-medium hover:text-primary">
