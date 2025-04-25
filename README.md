@@ -1,10 +1,10 @@
-# ChristoLanguage
+# ChristoLanguages
 
-This is the codebase for the ChristoLanguage website, a platform dedicated to personalized language learning.
+This is the codebase for the ChristoLanguages website, a platform dedicated to personalized language learning.
 
 ## About the Site
 
-ChristoLanguage aims to help users master new languages through a variety of resources and services:
+ChristoLanguages aims to help users master new languages through a variety of resources and services:
 
 *   **Expert Coaching:** Personalized one-on-one sessions tailored to individual learning goals.
 *   **Insightful Blog:** Regular articles covering language learning techniques, cultural nuances, and practical tips.

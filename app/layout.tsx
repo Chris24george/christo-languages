@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" })
 
 export const metadata = {
-  title: "ChristoLanguage - Expert Language Learning Resources",
+  title: "ChristoLanguages - Expert Language Learning Resources",
   description: "Personalized language learning through expert coaching, insightful blog content, and innovative tools.",
   generator: 'v0.dev'
 }
@@ -30,7 +30,7 @@ export default function RootLayout({
               <div className="container flex h-16 items-center justify-between">
                 <Link href="/" className="flex items-center gap-2 font-serif text-xl">
                   <Globe className="h-5 w-5 text-primary" />
-                  <span>ChristoLanguage</span>
+                  <span>ChristoLanguages</span>
                 </Link>
                 <nav className="hidden md:flex gap-6">
                   <Link href="#services" className="text-sm font-medium hover:text-primary">
@@ -66,7 +66,7 @@ export default function RootLayout({
                 <div className="flex flex-col gap-6 md:w-1/3">
                   <Link href="/" className="flex items-center gap-2 font-serif text-xl">
                     <Globe className="h-5 w-5 text-primary" />
-                    <span className="text-foreground">ChristoLanguage</span>
+                    <span className="text-foreground">ChristoLanguages</span>
                   </Link>
                   <p className="text-sm text-muted-foreground">
                     Empowering language learners through expert guidance, innovative tools, and comprehensive resources.
@@ -137,7 +137,7 @@ export default function RootLayout({
               </div>
               <div className="container flex flex-col gap-2 sm:flex-row py-6 items-center border-t px-4 md:px-6">
                 <p className="text-xs text-muted-foreground">
-                  &copy; {new Date().getFullYear()} ChristoLanguage. All rights reserved.
+                  &copy; {new Date().getFullYear()} ChristoLanguages. All rights reserved.
                 </p>
                 <nav className="sm:ml-auto flex gap-4 sm:gap-6">
                   <Link href="#" className="text-xs text-muted-foreground hover:text-primary">
