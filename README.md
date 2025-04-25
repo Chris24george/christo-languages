@@ -1,38 +1,48 @@
-# christo-languages
+# ChristoLanguage
 
-A brief description of your project.
+This is the codebase for the ChristoLanguage website, a platform dedicated to personalized language learning.
 
-## Getting Started
+## About the Site
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+ChristoLanguage aims to help users master new languages through a variety of resources and services:
 
-### Prerequisites
+*   **Expert Coaching:** Personalized one-on-one sessions tailored to individual learning goals.
+*   **Insightful Blog:** Regular articles covering language learning techniques, cultural nuances, and practical tips.
+*   **iOS App:** A companion mobile application for practicing on the go (details linked from the site).
+*   **Premium Learning Materials:** Resources like grammar guides, vocabulary builders, and pronunciation masterclasses available for purchase.
+*   **Newsletter:** Updates and language learning insights delivered via email.
 
-What things you need to install the software and how to install them:
+The site serves as a central hub for accessing these services, reading the blog, learning about the app, and booking coaching sessions.
 
-```bash
-npm install -g pnpm # Or your preferred package manager (npm, yarn)
-```
+## Tech Stack
 
-### Installing
+This website is built using modern web technologies:
 
-A step-by-step series of examples that tell you how to get a development env running:
+*   **Framework:** [Next.js](https://nextjs.org/) (App Router)
+*   **Language:** [TypeScript](https://www.typescriptlang.org/)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+*   **UI Components:** [Shadcn UI](https://ui.shadcn.com/) (using Radix UI primitives)
+*   **Deployment:** (You might want to add where this is hosted, e.g., Vercel, Netlify)
 
-1. Clone the repo
-   ```bash
-   git clone https://github.com/chrisgeorge/christo-languages.git
-   cd christo-languages
-   ```
-2. Install dependencies
-   ```bash
-   pnpm install
-   ```
-3. Run the development server
-   ```bash
-   pnpm dev
-   ```
+## Development
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+While primarily a deployed website, if you need to run it locally (e.g., for development):
+
+1.  **Clone the repo:**
+    ```bash
+    git clone https://github.com/chrisgeorge/christo-languages.git
+    cd christo-languages
+    ```
+2.  **Install dependencies:**
+    ```bash
+    pnpm install
+    ```
+3.  **Run the development server:**
+    ```bash
+    pnpm dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Built With
 
@@ -53,4 +63,4 @@ See also the list of [contributors](https://github.com/chrisgeorge/christo-langu
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details 
+This project's code is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details 
