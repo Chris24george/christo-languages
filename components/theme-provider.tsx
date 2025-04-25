@@ -22,7 +22,7 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
       // disableTransitionOnChange // Optional: uncomment if theme change animations are causing issues
       {...props}
     >
-      {children} // Render children directly
+      {children}
     </NextThemesProvider>
   )
 }
